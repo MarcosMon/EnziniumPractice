@@ -57,6 +57,20 @@ public class TokenContractTest {
 		assertEquals("Se espera 1 propietario", totalOwners, ricknillos.numOwners());
 	
 	}
+	@Test
+	public void comprobarBalances() {
+		Address rick = new Address();
+		Address morty = new Address();
+		TokenContract ricknillos = new TokenContract(rick);
+		TokenContract mortyy = new TokenContract(morty);
+		double balanceRick = 100d;
+		double balanceMorty = 0d;
+		ricknillos.setTotalSupply(100);
+		ricknillos.addOwner(rick.getPK(), ricknillos.totalSupply());
+
+		assertEquals(balanceRick, ricknillos.balanceOf(rick.getPK()), 0);
+		assertEquals(balanceMorty, mortyy.balanceOf(morty.getPK()), 0);
+	}
 
 //    @Test
 //    public void payable_test() {

@@ -72,4 +72,12 @@ public class TokenContract {
 		return this.getBalances().size();
 	}
 
+	public Double balanceOf(PublicKey pk) {
+		if (this.getBalances().get(pk) != null) {
+			return this.getBalances().get(pk);
+		} else {
+			return 0d;
+		}
+	}
+
 }
