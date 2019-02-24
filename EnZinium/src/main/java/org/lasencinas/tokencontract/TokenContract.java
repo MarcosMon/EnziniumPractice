@@ -68,4 +68,8 @@ public class TokenContract {
 				+ "Owner PK = " + getOwnerPK().getPK().hashCode();
 	}
 
+	public int numOwners() {
+		return this.getBalances().size();
+	}
+
 }
