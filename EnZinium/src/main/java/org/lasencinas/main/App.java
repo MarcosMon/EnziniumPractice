@@ -1,6 +1,7 @@
 package org.lasencinas.main;
 
 import org.lasencinas.address.Address;
+import org.lasencinas.tokencontract.TokenContract;
 
 /**
  * Contratos inteligentes con enZinium.
@@ -76,15 +77,15 @@ public class App {
 		 *         totalSupply()
 		 * @return el total de unidades de este token que actualmente existen.
 		 */
-//
-//        TokenContract ricknillos = new TokenContract(rick);
-//        ricknillos.setName("Ricknillos");
-//        ricknillos.setSymbol("RNiLL");
-//        ricknillos.setTotalSupply(100);
-//
-//        System.out.println("\n" + "Contrato de los Ricknillos" + "\n" + 
-//                                  "=========================="        );
-//        System.out.println(ricknillos.toString());
+
+        TokenContract ricknillos = new TokenContract(rick);
+        ricknillos.setName("Ricknillos");
+        ricknillos.setSymbol("RNiLL");
+        ricknillos.setTotalSupply(100);
+
+        System.out.println("\n" + "Contrato de los Ricknillos" + "\n" + 
+                                  "=========================="        );
+        System.out.println(ricknillos.toString());
 //
 //        /**
 //         * El contrato TokenContract contiene una tabla de balances 

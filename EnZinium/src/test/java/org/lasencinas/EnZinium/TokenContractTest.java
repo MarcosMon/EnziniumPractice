@@ -1,19 +1,45 @@
 package org.lasencinas.EnZinium;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+import org.lasencinas.address.Address;
+import org.lasencinas.tokencontract.TokenContract;
 
 public class TokenContractTest {
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@Test
+	public void comprobarPKOwner() {
+		Address rick = new Address();
+		TokenContract ricknillos = new TokenContract(rick);
+		assertNotNull(ricknillos.getOwnerPK());
+	}
+
+	@Test
+	public void comprobarNombre() {
+		TokenContract tokencontract = new TokenContract();
+		String name = "Ricknillos";
+		tokencontract.setName(name);
+		assertEquals(name, tokencontract.getName());
+	}
+
+	@Test
+	public void comprobarSymbol() {
+		TokenContract tokencontract = new TokenContract();
+		String symbol = "RNiLL";
+		tokencontract.setSymbol(symbol);
+		assertEquals(symbol, tokencontract.symbol());
+	}
+
+	@Test
+	public void comprobarTotalSupply() {
+		TokenContract tokencontract = new TokenContract();
+		Double totalSupply = 100d;
+		tokencontract.setTotalSupply(totalSupply);
+		assertEquals(totalSupply, tokencontract.getTotalSupply(), 0);
+	}
+
 //    @Test
 //    public void payable_test() {
 //
