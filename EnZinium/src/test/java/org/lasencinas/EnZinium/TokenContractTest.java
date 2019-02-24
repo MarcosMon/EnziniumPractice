@@ -37,7 +37,7 @@ public class TokenContractTest {
 		TokenContract tokencontract = new TokenContract();
 		Double totalSupply = 100d;
 		tokencontract.setTotalSupply(totalSupply);
-		assertEquals(totalSupply, tokencontract.getTotalSupply(), 0);
+		assertEquals(totalSupply, tokencontract.totalSupply(), 0);
 	}
 
 //    @Test
