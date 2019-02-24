@@ -39,6 +39,15 @@ public class TokenContractTest {
 		tokencontract.setTotalSupply(totalSupply);
 		assertEquals(totalSupply, tokencontract.totalSupply(), 0);
 	}
+	@Test
+	public void comprobarBalance() {
+		Address rick = new Address();
+		TokenContract ricknillos = new TokenContract(rick);
+		ricknillos.setTotalSupply(100);
+		ricknillos.addOwner(rick.getPK(), ricknillos.totalSupply());
+		ricknillos.addOwner(rick.getPK(), 500d);
+		assertEquals(100, ricknillos.getBalances().get(rick.getPK()), 0);
+	}
 
 //    @Test
 //    public void payable_test() {
