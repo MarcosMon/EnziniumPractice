@@ -1,4 +1,4 @@
-package enzinium;
+package org.lasencinas.gensig;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
